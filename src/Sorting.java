@@ -48,7 +48,7 @@ public class Sorting{
         list.add(new Person("XiaoyanBarry", 21));
 
 
-        Comparator<Person> comp = new Comparator<Person>() {
+        Comparator<Person> comp = new Comparator<>() {
 
             public int compare(Person o1, Person o2) {
                 if(o1.age>o2.age){
@@ -67,6 +67,7 @@ public class Sorting{
         for (Person p : list){
             System.out.print("name : "+p.name+"\t"+"age :" + p.age + "\n");
         }
+        System.out.println("Just Checkin things!!");
 
 
     }
