@@ -1,25 +1,26 @@
 import java.util.LinkedList;
 
-class Mystack {
+class Mystack<T> {
     int totalSize;
     int currentIndex = 0;
     int top = currentIndex - 1;
-    int[] arre;
+    T[] arre;
 
     public Mystack(int size) {
         this.totalSize = size;
-        this.arre = new int[totalSize];
+        this.arre = (T[]) new Object[totalSize];
+
     }
 
     int size() {
         return currentIndex;
     }
 
-    int peek() {
+    T peek() {
         return arre[top];
     }
 
-    void push(int x) {
+    void push(T x) {
         if (currentIndex < totalSize) {
             arre[currentIndex] = x;
             currentIndex++;
@@ -30,7 +31,7 @@ class Mystack {
 
     void pop() {
         if (currentIndex != 0) {
-            arre[top] = 0;
+            arre[top] = null;
             currentIndex--;
         } else {
             System.out.println("Cannot pop out of an empty Stack.");
