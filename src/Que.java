@@ -44,6 +44,7 @@ public class Que<T> {
             arre[size - 1] = null;
             front = arre[0];
         }
+        size --;
 
     }
 
